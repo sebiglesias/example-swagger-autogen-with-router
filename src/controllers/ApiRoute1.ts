@@ -29,12 +29,12 @@ export const createApiRouter1 = () => {
         })
     })
 
-    router.route('/users/:id').get(auth, (req: { params: { id: string } }, res: { status: (arg: number) => { json: { (arg: { data: User; message: string; }): void; new(): any; } } }) => {
+    router.route('/users/:id').get(auth, (req, res: express.Response<User> ) => {
         // #swagger.tags = ['User']
         // #swagger.description = 'Endpoint to get a specific user.'
-        const users = []
+        const users: User[] = [{id: 1, name: 'John'}, {id: 2, name: 'Jane'}]
         // @ts-ignore
-        const data = users.find(e => e.id === req.params.id)
+        const data: User[] = users.find(e => e.id === req.params.id)
 
         res.status(200).json({
             data,
