@@ -1,5 +1,5 @@
 
-module.exports = (req, res, next) => {
+export function auth(req, res, next) {
     try {
         // validation...
         next()

@@ -21,12 +21,12 @@
     "url": "git+https://github.com/davibaltar/example-swagger-autogen-with-router.git"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/index.ts",
     "start-gendoc": "node swagger.js"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "swagger-autogen": "^2.21.3",
+    "swagger-autogen": "^2.21.5",
     "swagger-ui-express": "^4.1.4"
   }
 }
